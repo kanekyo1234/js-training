@@ -4,7 +4,10 @@ import Chart from "../../components/Chart01";
 import instruction from "./instruction.md";
 
 const convertData = (input) => {
-  return []; // ここを作りましょう！
+  return input.map(([key,sum]) => ({//受け取るものが毎回配列(二次配列より)だから？[]をつけないとダメhttps://hfuji.hatenablog.jp/entry/2016/06/28/232820
+    "name":key,
+    "count":sum,
+  })); // ここを作りましょう！
 };
 
 const Lesson = () => {
