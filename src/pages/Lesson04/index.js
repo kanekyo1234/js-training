@@ -5,15 +5,20 @@ import instruction from "./instruction.md";
 
 const convertData = (input) => {
 
-  let type=new Set();
+  let species=new Set();
   for (let i=0;i<input.length;i++){
     console.log(input[i].species)
-    type.add(input[i].species)
+    species.add(input[i].species)
   }
-  type=Array.from(type)
-  console.log(type)
-
-  return; // ここを作りましょう！
+  species=Array.from(species)
+  console.log(species)
+  return species.map((species) => {
+    return {
+      id: species,
+      data: input.filter((item) => item.species === species)
+        .map(({ sepalLength: x, petalWidth: y }) => ({ x, y })),
+    };
+  });
 };
 
 const Lesson = () => {
