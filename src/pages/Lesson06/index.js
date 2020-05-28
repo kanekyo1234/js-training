@@ -5,7 +5,7 @@ import instruction from "./instruction.md";
 
 const convertData = (input) => {
 //alert(minx)
-function Data(a,b,y,x) {
+function Data(a, b, y, x) {
   this.color = a;
   this.gender = b;
   this.bmi = x/y**2;
@@ -14,15 +14,14 @@ function Data(a,b,y,x) {
 }
 let newData=[];
 for (let i=0; i<input.length;i++){
-  if (input[i].gender==="男性"){
-    newData[i]=new Data("blue",input[i].gender,input[i].y,input[i].x);
+  if (input[i].gender === "男性"){
+    newData[i] = new Data("blue", input[i].gender, input[i].y, input[i].x);
 
   }else{
-    newData[i]=new Data("red",input[i].gender,input[i].y,input[i].x);
+    newData[i] = new Data("red", input[i].gender, input[i].y, input[i].x);
 
   }
-  }//bin:
-  
+}//bin:
   return newData; // ここを作りましょう！
 };
 
